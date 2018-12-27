@@ -13,10 +13,13 @@ function changeIntoHombus(n) {
     var x = 1;
     var A = [];
     var outputArray = [];
+    //Create array
     for (let z = 0; z < (2 * n - 1); z += 1) {
         outputArray[z] = [];
     }
-    for (i = 0; i < n; i += 1) {
+    debugger;
+    /*End creat Array with n =3 3*3*/
+    /*for (i = 0; i < n; i += 1) {
         A[i] = [];
         for (j = 0; j < n; j += 1) {
             A[i][j] = x;
@@ -24,6 +27,6 @@ function changeIntoHombus(n) {
             outputArray[i + j].push(A[i][j]);
         }
     }
-    return outputArray;
+    return outputArray;*/
 }
 changeIntoHombus(4);
