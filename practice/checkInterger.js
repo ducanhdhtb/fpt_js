@@ -9,6 +9,7 @@ function kiem_tra_snt(n)
     // Nếu n bé hơn 2 tức là không phải số nguyên tố
     if (n < 2){
         flag = false;
+        //document.write(n + " không phải là số nguyên tố <br/>");
     }
     else{
         debugger;
