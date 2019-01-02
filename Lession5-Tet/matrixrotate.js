@@ -1,24 +1,41 @@
-var rotate = function(matrix) {
-    // Copy the original matrix
-    var origMatrix = matrix.slice();
-    for(var i=0; i < matrix.length; i++) {
-        // Map each row entry to its rotated value
-        var row = matrix[i].map(function(x, j) {
-            var k = (matrix.length - 1) - j;
-            return origMatrix[k][i];
-        });
-        matrix[i] = row;
-    }
-    return matrix;
-};
-// https://codereview.stackexchange.com/questions/186805/rotate-an-n-%C3%97-n-matrix-90-degrees-clockwise
-/* 
-function rotate(matrix) {
-    let result = [];
-    for(let i = 0; i < matrix[0].length; i++) {
-        let row = matrix.map(e => e[i]).reverse();
-        result.push(row);
-    }
-    return result;
-};
+/*Ý tưởng 1:
+Chuyển hàng đầu tiên thành cột cuối cùng
+Chuyển hàng thứ hai thành cột thứ 2 từ phải qua trái*/
+/* Y tuong 2 :
+  2.1 Reverse mảng
+  2.2 Hoán đổi vị trí i,j
 */
+/**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+/* var rotate = function(matrix) {
+    debugger;
+ // reverse the rows
+  matrix = matrix.reverse();
+  
+  // swap the symmetric elements
+  for (var i = 0; i < matrix.length; i++) {
+    for (var j = 0; j < i; j++) {
+      var temp = matrix[i][j];
+      matrix[i][j] = matrix[j][i];
+      matrix[j][i] = temp;
+    }
+  }
+  return matrix;
+};
+console.log(rotate([[1,2],[3,4]]));
+*/
+function rotateMatrix(matrix){
+    debugger;
+  var matrix = matrix.reverse();
+  for (var i = 0; i < matrix.length; i++) {
+    for (var j = 0; j < i; j++) {
+      var temp = matrix[i][j];
+      matrix[i][j] = matrix[j][i];
+      matrix[j][i] = temp;
+    }
+  }
+  return matrix;
+}
+console.log(rotateMatrix([[1,2],[3,4]]));
