@@ -1,0 +1,80 @@
+.css-translate>div{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    background-color: skyblue;
+}
+
+.css-translate>.lucsau{
+    transform: translate(500px, 100px);
+}
+
+.css-rotate>div{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    background-color: rgb(225, 235, 135);
+}
+
+.css-rotate>.lucsau{
+    transform: rotate(45deg);
+}
+.css-scale>div{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: rgb(215, 135, 235);
+}
+
+.css-scale>.lucsau{
+    transform: scale(4, 2);
+}
+.css-skellX>div{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    background-color: rgb(135, 162, 235);
+}
+
+.css-skellX>.lucsau{
+    transform: skewX(30deg);
+}
+.css-skellY>div{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    background-color: rgb(135, 162, 235);
+}
+
+.css-skellY>.lucsau{
+    transform: skewY(30deg);
+}
+
+.css-transition>div{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    background-color: rgb(135, 235, 177);
+    transition: width 4s linear 1s, height 4s ease 2s;
+}
+.css-transition>div:hover{
+    width: 800px;
+    height: 500px;
+}
+
+@keyframes demo1{
+    0% {transform: translateX(100px);}
+    25% {transform: translateX(700px);}
+    75% {transform: translateX(0);}
+    100%{transform: translateX(200px);}
+}
+
+.css-animation>div{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    background-color: rgb(235, 135, 148);
+    animation: demo1 5s linear 1s 2 none;
+    position: relative;
+}
+

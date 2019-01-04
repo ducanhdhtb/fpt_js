@@ -1,0 +1,155 @@
+
+/*gradient*/ 
+#grad1 {
+  height: 200px;
+  background-image: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+}
+
+#grad2 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red , yellow); /* Standard syntax (must be last) */
+}
+
+#grad3 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, red, yellow); /* Standard syntax (must be last) */
+}
+
+#grad4 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red, yellow, green); /* Standard syntax (must be last) */
+}
+
+ #grad5 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%); /* Standard syntax (must be last) */
+}
+
+#grad6 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red, yellow, green); /* Standard syntax (must be last) */
+}
+
+#grad7 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(circle, red, yellow, green); /* Standard syntax (must be last) */
+}
+
+#grad8 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%); /* Standard syntax (must be last) */
+}
+/*text shadow*/
+
+h1.a {
+  text-shadow: 2px 2px 5px red;
+}
+
+h1.b {
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+/*box shadow*/
+div.box1 {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: yellow;
+  box-shadow: 10px 10px 5px grey;
+}
+/*card*/
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+div.container {
+  padding: 10px;
+}
+/*Text overflow*/
+p.test1 {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+p.test2 {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*word wrap
+*/
+div.word-wrap {
+  width: 150px; 
+  border: 1px solid #000000;
+}
+
+div.c {
+  word-wrap: normal;
+}
+
+div.d {
+  word-wrap: break-word;
+}
+
+/*word break*/
+p.test3 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: keep-all;
+}
+
+p.test4 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: break-all;
+}
+/*writing mode*/
+p.test5 {
+  writing-mode: horizontal-tb; 
+}
+
+span.test6 {
+  writing-mode: vertical-rl; 
+}
+
+p.test6 {
+  writing-mode: vertical-rl; 
+}
+
+/*web font*/
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
+
+div.font {
+   font-family: myFirstFont;
+}

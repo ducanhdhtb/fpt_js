@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	#conner1{
+		border-radius: 35px;
+		border: 5px solid green;
+		padding: 20px; 
+		width: 200px;
+		height: 150px; 
+	}
+	#conner2{
+		border-radius: 50px 50px 30px 5px;
+		border: 5px solid green;
+
+	}
+	#borderimg { 
+		border: 10px solid transparent;
+		padding: 25px;
+		border-image: url(web/image/ny.png) 25 round;
+	}
+	#multiple-background {
+		background-image: url(web/image/ny.png), url(web/image/paris.png);
+		background-position: right bottom, left top;
+		background-repeat: no-repeat, repeat;
+		padding: 0px;
+		text-align: center;
+		color: red;
+		/*background-size: cover;*/
+        /*background-origin: border-box;*/
+		/*background-clip: padding-box;*/
+
+
+	}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+	<p id="conner1"> Rounded corners !!!</p>
+	<p id="conner2">Rounded conner shorthand property</p>
+	<p id="borderimg">border-image: url(border.png) 30 round;</p>
+
+
+	<div id="multiple-background">
+		<h1>Lorem Ipsum Dolor</h1>
+		<p>123456789Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+		</p>
+		<p>123456789Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+
+</body>
+</html>
