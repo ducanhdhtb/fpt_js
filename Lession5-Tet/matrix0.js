@@ -3,9 +3,8 @@ Từ một mảng m*n người dùng nhập vào
 Với chỉ một phần tử trong mảng có chỉ số bằng 0 thì cột ứng với chỉ số đó sẽ bằng 0 và hàng ứng với chỉ số đó sẽ bằng 0
 */
 /* Ý tưởng 
-Sử dụng vòng lặp để tìm ra phần tử có giá trị 0
-Tại vị trí phần tử có giá trị = 0 thi set row vs column của nó tương ứng bằng ko
-Ta sẽ set cho cột và hàng tương ứng bằng 0
+Sử dụng vòng lặp 1 để tìm ra phần tử có giá trị 0
+Su dung vong lap 2 de gan no vao
 
 */
 function setMatrix0(arr){
@@ -33,4 +32,4 @@ function setMatrix0(arr){
     return arr;
     
 }
-setMatrix0([[1,0,1],[1,1,0],[1,1,1]]);
+console.log(setMatrix0([[1,0,1,0],[1,1,1,1],[1,1,1,1],[0,1,1,1]]))
