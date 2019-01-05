@@ -41,12 +41,13 @@ function printPrimeArray(number){
 	if(checkPrime(number) == true){
 			var arr = [];
 			// lặp từ 2 tới n-1
-			for (var i = 2; i < number-1; i++)
+			for (var i = 2; i <= number; i++)
 			{
-				if (number % i != 0){
-					arr.push(i);
-					
+				// Check i is prime or not
+				if(checkPrime(i) == true){					
+						arr.push(i);											
 				}
+				
 			}
 		return arr;
 	}//Not a prime
@@ -56,4 +57,4 @@ function printPrimeArray(number){
 	
 }
     
-console.log(printPrimeArray(7));
+console.log(printPrimeArray(24));
