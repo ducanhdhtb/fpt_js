@@ -9005,6 +9005,6 @@ myData.forEach(function(value,index,arr){
   // Data process -- get First Name and Last Name
   //console.log(`${value.first_name}  ${value.last_name}`);
   //Put it in outputArray
-  outputArray.push(` ${value.first_name}  ${value.last_name}`);
+  outputArray.push(` ${value.first_name}  ${value.last_name}`); // Lexial scope
 })
 console.log(outputArray);

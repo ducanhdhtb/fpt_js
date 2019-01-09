@@ -9000,7 +9000,7 @@ const myData = [
       "salary": 12375
     }
   ]
-  let FullName = myData.map(function(value,index,myData){
+  let FullName = myData.map(function(value,index,myData){//Muon lay ket qua dung map . ko quan tam den ket qua dung foreach
         var full = (`${value.first_name} ${value.last_name}`);
         return full;
   })

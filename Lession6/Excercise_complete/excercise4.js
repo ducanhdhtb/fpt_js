@@ -9014,8 +9014,14 @@ const myData = [
      //var convertFirstName = firstName.replace("_","");
      //var changeIntoCamelcase = camelize("convertFirstName");
      //return convertFirstName;
-     value["firstName"] =  value["first_name"];
-     value["lastName"] = value["last_name"];
+     ////value["firstName"] =  value["first_name"];
+     //value["lastName"] = value["last_name"];
+     return {
+       email:i.email,
+       firstName:i.first_name,
+       ....,
+
+     }
      return myData;
   })
   console.log(upperCase);
