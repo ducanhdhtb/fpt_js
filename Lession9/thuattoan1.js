@@ -13,7 +13,7 @@ var searchInsert = function(nums, target) {
     var end = nums.length - 1;
     var index = Math.floor((end - start) / 2) + start;
     
-    if (target > nums[nums.length-1]) {
+    if (target > nums[end]) { // If target > value of last index
         // The target is beyond the end of this array.
         index = nums.length;
     }
@@ -44,4 +44,65 @@ var searchInsert = function(nums, target) {
     
     return index;
 };
-console.log(searchInsert([-8,1,4,5,6],9));
+console.log(searchInsert([1,4,5,6],4));
+
+
+// int binarySearch(int A[], int key, int left, int right)
+// {
+//     int mid;
+
+//     while(l < r) // Tìm đến khi chỉ còn 1 số duy nhất
+//     {
+//         mid = (l + r) / 2;
+
+//         if(A[mid] == key)
+//             break;
+//         else if(A[mid] > key)    // Khi cái Key nằm bên trái thằng mid
+//             r = mid - 1;
+//         else                     // Khi cái key năm bên phải
+//             l = mid + 1;
+//     }
+
+//     if(a[l] == key) return l;   // Nếu tìm được Key
+//     else -1;                    // Nếu như Key không tồn tại trong mảng
+// }
+
+
+// Không đệ qui
+// int BinarySearch(int a[], int n, int x)
+// { 
+//     int left = 0;
+//     int right = n - 1;
+    
+//     while (left <= right) {
+//         int mid = (left + right) / 2;
+//         if (x == a[mid]) 
+//             return mid;
+//         else if (x < a[mid]) 
+//             right = mid - 1;
+//         else if (x > a[mid]) 
+//             left = mid + 1;
+//     } 
+//     return -1;
+// }
+function BinarySearch(arr,target){
+    debugger;
+    var left = 0;
+    var right = arr.length - 1;
+    while(left <= right){
+        var mid = (left + right) / 2;
+        if(target == arr[mid]){
+            return true;
+        }
+        else if(arr[mid] > target){
+            right = mid - 1;
+        }
+        else if(arr[mid] < target){
+            left = arr[mid] + 1;
+
+        }
+    }
+    return false;
+
+}
+console.log(BinarySearch([1,3,5,7],3));
