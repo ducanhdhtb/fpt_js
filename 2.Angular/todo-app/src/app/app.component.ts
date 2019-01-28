@@ -30,9 +30,9 @@ export class AppComponent {
     },
   ];
 
-  addTodo(newTodoLabel){
+  addTodo(value){
     var newTodo = {
-      label: newTodoLabel,
+      label: value,
       priority: 1,
       done: false
     };
