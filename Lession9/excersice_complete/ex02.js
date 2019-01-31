@@ -16,7 +16,7 @@
 
 
 
-// ----------------------- v ----------------------
+// ----------------------- trung ----------------------
 var x = 2
 fns = [];
 
@@ -37,3 +37,23 @@ fns = [];
 // // DO NOT MODIFY BELOW CODE
 console.log(x * 2 === fns[x * 2]());
 // // true
+
+// -----------------------Duong ----------------------
+var x = 2,
+fns = [];
+
+(function() {
+  var x = 5;
+
+  for (var i = 0; i < x; i++) {
+    let j = i;
+    fns[i] = () =>{
+      return i;
+    }
+  }
+})();
+
+// DO NOT MODIFY BELOW CODE
+console.log(x * 2 === fns[x * 2]());
+// true
+

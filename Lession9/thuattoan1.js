@@ -95,7 +95,7 @@ function BinarySearch(arr,target){
             return true;
         }
         else if(arr[mid] > target){
-            right = mid - 1;
+            right = arr[mid] - 1;
         }
         else if(arr[mid] < target){
             left = arr[mid] + 1;

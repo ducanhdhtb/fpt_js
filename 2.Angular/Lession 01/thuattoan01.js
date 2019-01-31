@@ -1,14 +1,1 @@
-/**
- * The count-and-say sequence is the sequence of integers beginning as follows:
- * 1, 11, 21, 1211, 111221, ...
- * 1 is read off as "one 1" or 11.
- * 11 is read off as "two 1s" or 21.
- * 21 is read off as "one 2, then one 1" or 1211.
- * Given an integer n, generate the nth sequence.
- * Note: The sequence of integers will be represented as a string.
- */
-/* 
-ý tưởng :
-tạo một mảng đọc số
-một mảng đọc số lượng
-sau đó nối lại
+ * The count-and-say sequence is the sequence of integers beginning as follows: * 1, 11, 21, 1211, 111221, ... * 1 is read off as "one 1" or 11. * 11 is read off as "two 1s" or 21. * 21 is read off as "one 2, then one 1" or 1211. * Given an integer n, generate the nth sequence. * Note: The sequence of integers will be represented as a string. *//* // ý tưởng :// tạo một mảng đọc số// một mảng đọc số lượng// sau đó nối lại*/function countAndSay {  let lastElement = '1';  let count = 1;  while (count < n) {    // O    // duyet lastEmlement tung phan tu goi a    // dem co bao nhieu a lien tiep na    // kq = count A + a    // tang off set + na    let index = 0;    let temp = '';    while (index < lastElement.length) {      // O(M) // M = lastElement.length      const a = lastElement[index];      const countA = countNumberOf(lastElement, index); // O(M)      // aaaab => 4a      temp += `${countA}${a}`;      index += countA;    }    lastElement = temp;    count += 1;  } // O(N  M * 2)  return lastElement;}function countNumberOf(str, index) {  let j = index;  while (j < str.length && str[j] === str[index]) {    j += 1;  }  // 1. j = str.length - 1 =>  j - index  // 2. str[j] !== str[index]; => // baaaac  //   index i => index j co j - i + 1 - 1  return j - index;}countAndSay(4);
