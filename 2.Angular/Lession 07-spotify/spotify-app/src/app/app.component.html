@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="text-center">Spotify Clone</h1>
+
+  <app-input (onSearch)="onSearch($event)"></app-input>
+
+  <app-search-result [data]="data"></app-search-result>
+
+  <router-outlet></router-outlet>
+</div>

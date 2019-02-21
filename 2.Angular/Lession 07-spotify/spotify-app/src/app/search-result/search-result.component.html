@@ -1,0 +1,13 @@
+<div class="search-result row">
+  <h1 *ngIf="!data.length" class="text-center">No Data to display</h1>
+  <div class="card col-md-4" *ngFor="let a of data">
+    <img class="card-img-top" [src]="a.images[0]?.url" [alt]="a.name" />
+    <div class="card-body">
+      <h5 class="card-title">{{ a.name }}</h5>
+      <p class="card-text">
+        {{ a.genres?.join(' ') }}
+      </p>
+      <a [routerLink]="a.id" class="btn btn-primary">Top Track</a>
+    </div>
+  </div>
+</div>
